@@ -76,7 +76,7 @@ export function FAQSection() {
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Side: CTA Card (4 cols) */}
-          <div className="lg:col-span-4 h-fit sticky top-24">
+          <div className="lg:col-span-4 h-fit">
             <div className="bg-white dark:bg-[#722f37] border border-border/50 dark:border-transparent p-6 md:p-8 text-foreground dark:text-white flex flex-col justify-center shadow-sm dark:shadow-none">
               <h3 className="font-serif text-2xl mb-4">¿Tenés más dudas?</h3>
               <p className="mb-8 text-muted-foreground dark:text-white/80 leading-relaxed">

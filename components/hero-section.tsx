@@ -63,7 +63,7 @@ export function HeroSection() {
                   <br />
                   <span className="text-[#722f37]">{slide.subtitle}</span>
                 </h1>
-                <p className="text-white/90 text-lg md:text-xl lg:text-3xl mb-8 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-white/90 text-base md:text-lg lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
                   {slide.description}
                 </p>
               </div>
@@ -108,7 +108,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce cursor-pointer">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 animate-bounce cursor-pointer">
         <Link href="#nosotros" className="flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors">
           <span className="text-[10px] uppercase tracking-[0.3em] font-medium">Saber Más</span>
           <ChevronDown className="w-6 h-6" />

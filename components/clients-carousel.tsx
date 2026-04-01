@@ -28,7 +28,7 @@ export function ClientsCarousel({ showTitle = true, bgGrey = false }: ClientsCar
   return (
     <section className={`py-16 overflow-hidden ${bgColor}`}>
       {showTitle && (
-        <div className="container mx-auto px-4 mb-10">
+        <div className="hidden md:block container mx-auto px-4 mb-10">
           <p className={`text-center text-sm uppercase tracking-widest font-semibold ${bgGrey ? 'text-[#722f37]' : 'text-muted-foreground'}`}>
             Tenemos experiencia con las siguientes instituciones entre otras
           </p>
