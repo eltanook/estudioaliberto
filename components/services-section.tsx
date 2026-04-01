@@ -48,7 +48,7 @@ function ServiceCard({ service, index, isHome, bgGrey }: { service: typeof servi
   return (
     <div
       ref={ref}
-      className={`border p-8 transition-all duration-700 group ${
+      className={`border p-6 md:p-8 transition-all duration-700 group ${
         isHome || !bgGrey 
           ? "bg-white/10 border-white/20 hover:bg-white/20 text-white" 
           : "bg-white dark:bg-[#0a1628] border-border hover:border-[#722f37] text-foreground"
@@ -57,10 +57,10 @@ function ServiceCard({ service, index, isHome, bgGrey }: { service: typeof servi
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="w-16 h-16 bg-[#722f37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-        <Icon className="w-8 h-8 text-white" />
+      <div className="w-14 h-14 md:w-16 md:h-16 bg-[#722f37] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+        <Icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
       </div>
-      <h3 className="font-serif text-2xl mb-4">{service.title}</h3>
+      <h3 className="font-serif text-xl md:text-2xl mb-4">{service.title}</h3>
       {service.description && (
         <p className={`text-sm mb-4 leading-relaxed ${isHome || !bgGrey ? 'text-white/80' : 'text-muted-foreground'}`}>
           {service.description}
@@ -93,7 +93,7 @@ export function ServicesSection({ showTitle = true, isHome = false, bgGrey = fal
   return (
     <section 
       id="servicios" 
-      className={`py-24 relative ${isHome ? 'bg-cover bg-center bg-fixed' : bgGrey ? 'bg-[#f5f5f5] dark:bg-[#0d1b2e] text-foreground' : 'bg-[#0a1628] text-white'}`}
+      className={`py-16 md:py-24 relative ${isHome ? 'bg-cover bg-center bg-fixed' : bgGrey ? 'bg-[#f5f5f5] dark:bg-[#0d1b2e] text-foreground' : 'bg-[#0a1628] text-white'}`}
       style={isHome ? { 
         backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vertical-low-angle-shot-black-building-with-mirror-windows-clear-sky-9NGxSkd4jGB3Tvo6CVEmePFtytY1xt.jpg')`,
       } : {}}
@@ -105,24 +105,24 @@ export function ServicesSection({ showTitle = true, isHome = false, bgGrey = fal
         {showTitle && (
           <div 
             ref={headerRef}
-            className={`text-center mb-16 transition-all duration-700 ${
+            className={`text-center mb-12 md:mb-16 transition-all duration-700 ${
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <span className="text-[#722f37] font-semibold uppercase tracking-widest text-sm drop-shadow-sm">
               Áreas de Práctica
             </span>
-            <h2 className={`font-serif text-3xl md:text-4xl lg:text-5xl mt-4 leading-tight drop-shadow-md ${isHome ? 'text-white' : !bgGrey ? 'text-white' : 'text-foreground'}`}>
+            <h2 className={`font-serif text-2xl md:text-4xl lg:text-5xl mt-4 leading-tight drop-shadow-md ${isHome ? 'text-white' : !bgGrey ? 'text-white' : 'text-foreground'}`}>
               Nuestros Servicios
             </h2>
-            <p className={`mt-4 max-w-2xl mx-auto font-medium ${isHome ? 'text-white/90' : !isHome && !bgGrey ? 'text-white' : bgGrey ? 'text-black dark:text-white/90' : 'text-foreground/90'}`}>
+            <p className={`mt-3 md:mt-4 max-w-2xl mx-auto font-medium text-sm md:text-base ${isHome ? 'text-white/90' : !isHome && !bgGrey ? 'text-white' : bgGrey ? 'text-black dark:text-white/90' : 'text-foreground/90'}`}>
               Brindamos asesoramiento legal integral con un enfoque personalizado para cada caso
             </p>
           </div>
         )}
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} isHome={isHome} bgGrey={bgGrey} />
           ))}

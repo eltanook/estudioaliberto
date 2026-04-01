@@ -56,16 +56,16 @@ const serviceDetails = [
 
 export function ServiceDetails() {
   return (
-    <section className="py-24 bg-[#fcfcfc] dark:bg-[#0a1628]">
+    <section className="py-16 md:py-24 bg-[#fcfcfc] dark:bg-[#0a1628]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-serif text-2xl md:text-4xl text-foreground mb-4">
             Información Detallada de Servicios
           </h2>
           <div className="w-24 h-1 bg-[#722f37] mx-auto" />
         </div>
 
-        <div className="grid gap-16">
+        <div className="grid gap-12 lg:gap-16">
           {serviceDetails.map((service, index) => {
             const Icon = service.icon
             return (
@@ -89,16 +89,16 @@ function ServiceDetailItem({ service, Icon, isEven }: { service: typeof serviceD
   return (
     <div 
       ref={ref}
-      className={`flex flex-col lg:flex-row gap-12 items-center transition-all duration-1000 ${
+      className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       } ${!isEven ? 'lg:flex-row-reverse' : ''}`}
     >
       <div className="lg:w-1/2 space-y-6">
         <div className="flex items-center gap-4 mb-2">
-          <div className="w-12 h-12 bg-[#722f37] flex items-center justify-center text-white">
+          <div className="w-12 h-12 bg-[#722f37] flex shrink-0 items-center justify-center text-white">
             <Icon className="w-6 h-6" />
           </div>
-          <h3 className="font-serif text-2xl md:text-3xl text-foreground">{service.title}</h3>
+          <h3 className="font-serif text-xl md:text-3xl text-foreground">{service.title}</h3>
         </div>
         <p className="text-lg text-muted-foreground leading-relaxed">
           {service.description}
@@ -112,8 +112,8 @@ function ServiceDetailItem({ service, Icon, isEven }: { service: typeof serviceD
           ))}
         </ul>
       </div>
-      <div className="lg:w-1/2 w-full h-px lg:h-64 bg-gradient-to-r from-transparent via-[#722f37]/20 to-transparent flex items-center justify-center">
-        <div className="text-[#722f37]/5 font-serif text-[120px] font-bold select-none">
+      <div className="lg:w-1/2 w-full h-px lg:h-64 bg-gradient-to-r from-transparent via-[#722f37]/20 to-transparent flex items-center justify-center overflow-hidden">
+        <div className="hidden lg:block text-[#722f37]/5 font-serif text-[60px] xl:text-[100px] font-bold select-none whitespace-nowrap">
           {service.title.split(' ')[0]}
         </div>
       </div>
