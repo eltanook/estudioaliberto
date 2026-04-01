@@ -8,7 +8,6 @@ const quickLinks = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/servicios", label: "Servicios" },
-  { href: "/equipo", label: "Equipo" },
   { href: "/contacto", label: "Contacto" },
 ]
 
@@ -85,13 +84,13 @@ export function Footer() {
             <h4 className="font-serif text-lg mb-6">Contacto</h4>
             <div className="space-y-4">
               <a
-                href="https://wa.me/5491131458264"
+                href="https://wa.me/5491130087678"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/70 hover:text-[#722f37] transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
-                11-3145-8264
+                11-3008-7678
               </a>
               <a
                 href="mailto:estudioaliberto@gmail.com"

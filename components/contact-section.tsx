@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "WhatsApp",
-    value: "11-3145-8264",
-    href: "https://wa.me/5491131458264",
+    value: "11-3008-7678",
+    href: "https://wa.me/5491130087678",
   },
   {
     icon: Mail,
@@ -27,16 +27,14 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Atencion",
-    value: "Virtual todos los dias. Presencial con turno.",
+    value: "de 10:00 a 18:00 días hábiles",
   },
 ]
 
 const services = [
-  "Derecho Civil",
-  "Derecho de Familia",
-  "Ciudadanía Italiana",
-  "Gestoría",
+  "Amparo de Salud",
   "Sucesiones",
+  "Divorcios",
   "Contratos",
   "Otro",
 ]
@@ -100,147 +98,144 @@ export function ContactSection({ showTitle = true }: ContactSectionProps) {
 
         <div 
           ref={contentRef}
-          className={`grid lg:grid-cols-2 gap-12 transition-all duration-700 ${
+          className={`grid lg:grid-cols-12 gap-8 transition-all duration-700 ${
             contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Contact Info */}
-          <div className="flex flex-col justify-center overflow-hidden">
-            <div className="space-y-6">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/close-up-modern-office-buildings-5qBtuQ1sYym6X5MlRmQth7Q8j747Gj.jpg"
-                  alt="Oficinas modernas"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              
-              {/* Contact Cards - Equal Size Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                {contactInfo.map((info) => {
-                  const Icon = info.icon
-                  const Content = (
-                    <div className="flex flex-col items-center justify-center p-6 bg-card border border-border hover:border-[#722f37] transition-colors h-full min-h-[160px] text-center">
-                      <div className="w-12 h-12 bg-[#722f37] flex items-center justify-center mb-4">
-                        <Icon className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                        {info.label}
-                      </span>
-                      <p className="text-foreground font-medium text-sm leading-tight">
+          {/* Left Column: Contact info cards (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
+            {contactInfo.map((info) => {
+              const Icon = info.icon
+              return (
+                <div 
+                  key={info.label} 
+                  className="bg-card border border-border p-6 flex items-start gap-5 group hover:border-[#722f37] transition-all duration-300 shadow-sm"
+                >
+                  <div className="w-12 h-12 bg-[#722f37] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-[10px] text-[#722f37] font-bold uppercase tracking-[0.2em] block">
+                      {info.label}
+                    </span>
+                    {info.href ? (
+                      <a 
+                        href={info.href} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-lg font-serif text-foreground hover:text-[#722f37] transition-colors leading-tight block"
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-lg font-serif text-foreground leading-tight">
                         {info.value}
                       </p>
-                    </div>
-                  )
-                  
-                  return info.href ? (
-                    <a key={info.label} href={info.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-                      {Content}
-                    </a>
-                  ) : (
-                    <div key={info.label} className="h-full">{Content}</div>
-                  )
-                })}
-              </div>
+                    )}
+                  </div>
+                </div>
+              )
+            })}
+            
+            <div className="px-2 pt-4">
+              <p className="text-sm text-muted-foreground italic leading-relaxed">
+                Atención presencial únicamente con cita previa en nuestras oficinas de CABA.
+              </p>
             </div>
           </div>
 
-          {/* Contact Form - No shadow */}
-          <div className="bg-card p-8 md:p-10 border border-border flex flex-col justify-center min-h-full">
-            <div className="w-full">
-              <h3 className="font-serif text-2xl text-foreground mb-6">
-                Envianos tu consulta
-              </h3>
-              <form 
-                onSubmit={handleSubmit} 
-                className="space-y-6"
-              >
-              {/* FormSubmit Config */}
+          {/* Right Column: Contact Form (8 cols) */}
+          <div className="lg:col-span-8 bg-card border border-border p-8 md:p-12 lg:p-16 shadow-sm">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* FormSubmit Configuration */}
               <input type="hidden" name="_subject" value="Nueva consulta desde el sitio web" />
-              <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              
-              <div>
-                <label htmlFor="nombre" className="block text-sm font-medium text-foreground mb-2">
-                    Nombre y Apellido *
-                </label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  required
-                  className="w-full px-4 py-3 bg-background border border-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[#722f37] transition-colors"
-                  placeholder="Tu nombre"
-                />
-              </div>
+              <input type="hidden" name="_captcha" value="false" />
 
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-[#722f37]">
+                    Nombre Completo *
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
+                    id="name"
+                    name="name"
+                    type="text"
                     required
-                    className="w-full px-4 py-3 bg-background border border-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[#722f37] transition-colors"
-                    placeholder="tu@email.com"
+                    placeholder="Ej: Juan Pérez"
+                    className="w-full px-4 py-4 bg-secondary/30 border border-border focus:border-[#722f37] outline-none transition-colors"
                   />
                 </div>
-                <div>
-                  <label htmlFor="telefono" className="block text-sm font-medium text-foreground mb-2">
-                    Teléfono
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-[#722f37]">
+                    Teléfono de Contacto *
                   </label>
                   <input
+                    id="phone"
+                    name="phone"
                     type="tel"
-                    id="telefono"
-                    name="telefono"
                     required
-                    className="w-full px-4 py-3 bg-background border border-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[#722f37] transition-colors"
-                    placeholder="11-1234-5678"
+                    placeholder="Ej: 11 1234 5678"
+                    className="w-full px-4 py-4 bg-secondary/30 border border-border focus:border-[#722f37] outline-none transition-colors"
                   />
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="servicio" className="block text-sm font-medium text-foreground mb-2">
-                  Servicio requerido
-                </label>
-                <select
-                  id="servicio"
-                  name="servicio"
-                  required
-                  className="w-full px-4 py-3 bg-background border border-input text-foreground focus:outline-none focus:border-[#722f37] transition-colors"
-                >
-                  <option value="">Seleccionar servicio</option>
-                  {services.map((service) => (
-                    <option key={service} value={service}>
-                      {service}
-                    </option>
-                  ))}
-                </select>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-xs font-bold uppercase tracking-widest text-[#722f37]">
+                    Servicio Requerido *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    className="w-full px-4 py-4 bg-secondary/30 border border-border focus:border-[#722f37] outline-none transition-colors appearance-none"
+                  >
+                    <option value="">Seleccione un servicio</option>
+                    <option value="Amparos de Salud">Amparos de Salud</option>
+                    <option value="Sucesiones">Sucesiones</option>
+                    <option value="Divorcios">Divorcios</option>
+                    <option value="Contratos">Contratos</option>
+                    <option value="Otro">Otro Motivo</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="preferred_contact" className="text-xs font-bold uppercase tracking-widest text-[#722f37]">
+                    Medio de contacto preferido *
+                  </label>
+                  <select
+                    id="preferred_contact"
+                    name="preferred_contact"
+                    required
+                    className="w-full px-4 py-4 bg-secondary/30 border border-border focus:border-[#722f37] outline-none transition-colors appearance-none"
+                  >
+                    <option value="">Seleccione una opción</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Llamada telefónica">Llamada telefónica</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="mensaje" className="block text-sm font-medium text-foreground mb-2">
-                  Mensaje
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-[#722f37]">
+                  Mensaje o Consulta *
                 </label>
                 <textarea
-                  id="mensaje"
-                  name="mensaje"
+                  id="message"
+                  name="message"
+                  rows={5}
                   required
-                  rows={4}
-                  className="w-full px-4 py-3 bg-background border border-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[#722f37] transition-colors resize-none"
-                  placeholder="Describi brevemente tu consulta..."
-                />
+                  placeholder="Describa brevemente su situación..."
+                  className="w-full px-4 py-4 bg-secondary/30 border border-border focus:border-[#722f37] outline-none transition-colors resize-none"
+                ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#722f37] text-white py-4 font-medium uppercase tracking-wider hover:bg-[#722f37]/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
+                className="w-full bg-[#722f37] text-white py-5 font-bold uppercase tracking-[0.2em] text-sm hover:bg-[#722f37]/90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 disabled:opacity-70"
               >
                 {isSubmitting ? (
                   "Enviando..."
@@ -251,8 +246,7 @@ export function ContactSection({ showTitle = true }: ContactSectionProps) {
                   </>
                 )}
               </button>
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>

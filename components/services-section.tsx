@@ -7,21 +7,19 @@ const services = [
   {
     icon: Scale,
     title: "Servicios Jurídicos",
+    description: "Asesoría legal integral en sucesiones, divorcios, contratos y más, con un enfoque humano y profesional.",
     items: [
-      "Accidentes de tránsito",
-      "Divorcios - Alimentos y Régimen de Comunicación",
-      "Rectificaciones de partidas",
-      "Contratos de alquiler y de servicios",
-      "Sucesiones y Ejecuciones",
-      "Desalojos y Daños y perjuicios",
       "Amparos de Salud",
+      "Sucesiones",
+      "Divorcios",
+      "Contratos",
     ],
   },
   {
     icon: FileSearch,
     title: "Gestoría",
     description:
-      "Estudio Jurídico Aliberto ofrece gestoría en Registro Automotor, Propiedad Inmueble, Registro Civil, RENAPER, AGIP.",
+      "Gestiones ágiles ante el Registro Automotor, Propiedad Inmueble, Registro Civil, RENAPER y AGIP.",
     items: [
       "Informes de Dominio e índice de Titularidad",
       "Certificados de deuda AGIP y DDJJ TGB (ARBA)",
@@ -32,6 +30,7 @@ const services = [
   {
     icon: Flag,
     title: "Ciudadanía Italiana",
+    description: "Te acompañamos en todo el proceso de obtención de tu ciudadanía, desde la búsqueda de partidas hasta el armado de carpeta.",
     items: [
       "Asesoría General (Reconstrucción e Hijo Directo)",
       "Revisión y Armado de Carpetas",

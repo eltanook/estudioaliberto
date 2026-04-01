@@ -15,13 +15,13 @@ export function TopBar() {
             <span className="hidden sm:inline">estudioaliberto@gmail.com</span>
           </a>
           <a 
-            href="https://wa.me/5491131458264" 
+            href="https://wa.me/5491130087678" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-[#722f37] transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">11-3145-8264</span>
+            <span className="hidden sm:inline">11-3008-7678</span>
           </a>
         </div>
         <div className="flex items-center gap-4">

@@ -3,16 +3,17 @@
 import { Building2, Landmark, Shield, Scale, Briefcase, FileText, Award, Building } from "lucide-react"
 
 const clients = [
-  { name: "AGIP", icon: Landmark },
-  { name: "ARBA", icon: Building2 },
-  { name: "ANSES", icon: Shield },
-  { name: "Registro Civil", icon: FileText },
-  { name: "Colegios de Abogados", icon: Scale },
-  { name: "Juzgados Civiles", icon: Landmark },
-  { name: "Tribunales", icon: Building },
-  { name: "Consulados", icon: Award },
-  { name: "Escribanías", icon: Briefcase },
-  { name: "Registro Propiedad", icon: Building2 },
+  { name: "PAMI" },
+  { name: "IOMA" },
+  { name: "Swiss Medical" },
+  { name: "UPCN Sindicato" },
+  { name: "Accord Salud" },
+  { name: "Italiano" },
+  { name: "Consulado Italiano Buenos Aires" },
+  { name: "Consulado Italiano Rosario" },
+  { name: "Registro Propiedad" },
+  { name: "AGIP y ARBA" },
+  { name: "ANSES" },
 ]
 
 interface ClientsCarouselProps {
@@ -29,7 +30,7 @@ export function ClientsCarousel({ showTitle = true, bgGrey = false }: ClientsCar
       {showTitle && (
         <div className="container mx-auto px-4 mb-10">
           <p className={`text-center text-sm uppercase tracking-widest font-semibold ${bgGrey ? 'text-[#722f37]' : 'text-muted-foreground'}`}>
-            Trabajamos con las principales instituciones
+            Tenemos experiencia con las siguientes instituciones entre otras
           </p>
         </div>
       )}
@@ -45,22 +46,18 @@ export function ClientsCarousel({ showTitle = true, bgGrey = false }: ClientsCar
         {/* Carousel Track */}
         <div className="flex animate-scroll">
           {/* First set */}
-          {[...clients, ...clients].map((client, index) => {
-            const Icon = client.icon
-            return (
-              <div
-                key={`${client.name}-${index}`}
-                className={`flex-shrink-0 flex items-center gap-3 mx-8 px-6 py-4 border transition-all duration-300 ${
-                  bgGrey 
-                    ? "border-border bg-white text-foreground shadow-sm dark:bg-[#0a1628] dark:border-white/10 dark:text-white" 
-                    : "border-white/10 bg-white/5 text-white hover:bg-white/10"
-                }`}
-              >
-                <Icon className={`w-6 h-6 transition-colors ${bgGrey ? "text-[#722f37]" : "text-[#722f37]"}`} strokeWidth={1.5} />
-                <span className="font-semibold tracking-wide whitespace-nowrap">{client.name}</span>
-              </div>
-            )
-          })}
+          {[...clients, ...clients].map((client, index) => (
+            <div
+              key={`${client.name}-${index}`}
+              className={`flex-shrink-0 flex items-center mx-8 px-8 py-5 border transition-all duration-300 ${
+                bgGrey 
+                  ? "border-border bg-white text-foreground shadow-sm dark:bg-[#0a1628] dark:border-white/10 dark:text-white" 
+                  : "border-white/10 bg-white/5 text-white hover:bg-white/10"
+              }`}
+            >
+              <span className="font-serif text-lg font-bold tracking-widest whitespace-nowrap uppercase">{client.name}</span>
+            </div>
+          ))}
         </div>
       </div>
       

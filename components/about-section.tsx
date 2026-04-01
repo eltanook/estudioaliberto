@@ -58,8 +58,7 @@ export function AboutSection({ showTitle = true, bgGrey = false }: AboutSectionP
                 días, y de forma presencial únicamente con turno previo.
               </p>
               <p>
-                Realizamos asesoría legal en Derecho Civil, Derecho de Familia y Ciudadanía Italiana. Nuestro equipo de 
-                profesionales está comprometido con brindar soluciones efectivas y personalizadas para cada cliente.
+                Realizamos asesoría legal en Derecho Civil, Derecho de Familia y Ciudadanía Italiana. Nuestro estudio está comprometido con brindar soluciones efectivas y personalizadas para cada cliente.
               </p>
               <p className={`text-lg leading-relaxed font-medium ${bgGrey ? 'text-foreground/90' : 'text-muted-foreground'}`}>
                 Especializados en accidentes de tránsito, divorcios, alimentos y régimen de comunicación, rectificación de 

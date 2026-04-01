@@ -7,6 +7,7 @@ import { TeamSection } from "@/components/team-section"
 import { ContactSection } from "@/components/contact-section"
 import { MapSection } from "@/components/map-section"
 import { ClientsCarousel } from "@/components/clients-carousel"
+import { FAQSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { Toaster } from "sonner"
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection bgGrey={true} />
+      <FAQSection />
       <ServicesSection isHome={true} />
       <TeamSection />
       <ContactSection />

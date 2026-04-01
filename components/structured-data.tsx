@@ -6,7 +6,7 @@ export function StructuredData() {
     "image": "https://estudioaliberto.com.ar/LOGO_ALIBERTO.png",
     "@id": "https://estudioaliberto.com.ar",
     "url": "https://estudioaliberto.com.ar",
-    "telephone": "+5491131458264",
+    "telephone": "+5491130087678",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Buenos Aires",

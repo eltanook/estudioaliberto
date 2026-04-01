@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://estudioaliberto.com.ar'),
   title: {
-    default: 'Estudio Jurídico Aliberto | Asesoría Legal en Buenos Aires',
+    default: 'Amparo de Salud y Asesoría Legal | Estudio Jurídico Aliberto',
     template: '%s | Estudio Jurídico Aliberto'
   },
-  description: 'Defendemos tus derechos con experiencia y compromiso. Asesoría Legal en Derecho Civil, Derecho de Familia y Ciudadanía Italiana. CABA y Provincia de Buenos Aires.',
-  keywords: ['abogados', 'estudio jurídico', 'derecho civil', 'derecho de familia', 'ciudadanía italiana', 'buenos aires', 'CABA', 'sucesiones', 'gestoría'],
+  description: 'Especialistas en Amparo de Salud, Sucesiones y Derecho de Familia. Defendemos tus derechos con experiencia y compromiso en CABA y GBA. Consultas de Lunes a Viernes.',
+  keywords: ['amparo de salud', 'abogados amparos', 'sucesiones', 'divorcios', 'estudio jurídico buenos aires', 'derecho de familia', 'ciudadanía italiana', 'CABA', 'gestoría'],
   authors: [{ name: 'Estudio Jurídico Aliberto' }],
   category: 'Legal',
   alternates: {

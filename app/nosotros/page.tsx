@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Nosotros | Estudio Jurídico Aliberto",
-  description: "Conozca a nuestro equipo de profesionales comprometidos con brindar soluciones legales efectivas y personalizadas.",
+  description: "Conozca nuestra trayectoria y el compromiso de brindar soluciones legales efectivas y personalizadas en CABA y GBA.",
 }
 
 export default function NosotrosPage() {
