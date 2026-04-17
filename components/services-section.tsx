@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Scale, FileSearch, Flag } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
@@ -93,12 +94,20 @@ export function ServicesSection({ showTitle = true, isHome = false, bgGrey = fal
   return (
     <section 
       id="servicios" 
-      className={`py-16 md:py-24 relative ${isHome ? 'bg-cover bg-center bg-fixed' : bgGrey ? 'bg-[#f5f5f5] dark:bg-[#0d1b2e] text-foreground' : 'bg-[#0a1628] text-white'}`}
-      style={isHome ? { 
-        backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vertical-low-angle-shot-black-building-with-mirror-windows-clear-sky-9NGxSkd4jGB3Tvo6CVEmePFtytY1xt.jpg')`,
-      } : {}}
+      className={`py-16 md:py-24 relative overflow-hidden ${isHome ? '' : bgGrey ? 'bg-[#f5f5f5] dark:bg-[#0d1b2e] text-foreground' : 'bg-[#0a1628] text-white'}`}
     >
-      {isHome && <div className="absolute inset-0 bg-[#0a1628]/85" />}
+      {isHome && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vertical-low-angle-shot-black-building-with-mirror-windows-clear-sky-9NGxSkd4jGB3Tvo6CVEmePFtytY1xt.jpg"
+            alt="Edificio moderno para servicios legales"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[#0a1628]/85" />
+        </div>
+      )}
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}

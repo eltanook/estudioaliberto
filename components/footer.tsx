@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Enlaces Rapidos</h4>
+            <h3 className="font-serif text-lg mb-6">Enlaces Rápidos</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -64,7 +64,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Servicios</h4>
+            <h3 className="font-serif text-lg mb-6">Servicios</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -81,13 +81,14 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg mb-6">Contacto</h4>
+            <h3 className="font-serif text-lg mb-6">Contacto</h3>
             <div className="space-y-4">
               <a
                 href="https://wa.me/5491130087678"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/70 hover:text-[#722f37] transition-colors text-sm"
+                aria-label="Contactar por WhatsApp"
               >
                 <Phone className="w-4 h-4" />
                 11-3008-7678
@@ -95,6 +96,7 @@ export function Footer() {
               <a
                 href="mailto:estudioaliberto@gmail.com"
                 className="flex items-center gap-3 text-white/70 hover:text-[#722f37] transition-colors text-sm"
+                aria-label="Enviar correo electrónico"
               >
                 <Mail className="w-4 h-4" />
                 estudioaliberto@gmail.com

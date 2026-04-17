@@ -10,6 +10,7 @@ export function TopBar() {
           <a 
             href="mailto:estudioaliberto@gmail.com" 
             className="flex items-center gap-2 hover:text-[#722f37] transition-colors"
+            aria-label="Enviar correo electrónico"
           >
             <Mail className="w-4 h-4" />
             <span className="hidden sm:inline">estudioaliberto@gmail.com</span>
@@ -19,6 +20,7 @@ export function TopBar() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-[#722f37] transition-colors"
+            aria-label="Contactar por WhatsApp"
           >
             <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">11-3008-7678</span>

@@ -3,9 +3,9 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Estudio Jurídico Aliberto",
-    "image": "https://estudioaliberto.com.ar/LOGO_ALIBERTO.png",
-    "@id": "https://estudioaliberto.com.ar",
-    "url": "https://estudioaliberto.com.ar",
+    "image": "https://estudiojuridicoaliberto.com/LOGO_ALIBERTO.png",
+    "@id": "https://estudiojuridicoaliberto.com",
+    "url": "https://estudiojuridicoaliberto.com",
     "telephone": "+5491130087678",
     "address": {
       "@type": "PostalAddress",

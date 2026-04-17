@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 
@@ -35,13 +36,17 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image - bg-scroll para compatibilidad iOS/Safari */}
-      <div 
-        className="absolute inset-0 z-0 bg-scroll bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vertical-low-angle-shot-black-building-with-mirror-windows-clear-sky-9NGxSkd4jGB3Tvo6CVEmePFtytY1xt.jpg')`,
-        }}
-      >
+      {/* Optimized Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vertical-low-angle-shot-black-building-with-mirror-windows-clear-sky-9NGxSkd4jGB3Tvo6CVEmePFtytY1xt.jpg"
+          alt="Modern law office building with reflection"
+          fill
+          priority
+          quality={90}
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-[#0a1628]/80" />
       </div>
 

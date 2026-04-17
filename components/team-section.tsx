@@ -37,9 +37,10 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
       <div className="relative aspect-[3/4] overflow-hidden">
         <Image
           src={member.image}
-          alt={member.name}
+          alt={`Retrato profesional de ${member.name} - ${member.role} en Estudio Jurídico Aliberto`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {/* Overlay on Hover */}
         <div className="absolute inset-0 bg-[#0a1628]/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col items-center justify-center text-white">
@@ -153,9 +154,10 @@ export function TeamSection({ showTitle = true }: TeamSectionProps) {
             <div className="relative aspect-[4/3] overflow-hidden border-2 border-border shadow-2xl">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31214-lAp2en6h5QzT09jeAhbki26PJoR1b5.jpg"
-                alt="Dr. Martin Aliberto"
+                alt="Dr. Martin Aliberto - Director Fundador de Estudio Jurídico Aliberto"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Overlay on Hover */}
               <div className="absolute inset-0 bg-[#0a1628]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-white">

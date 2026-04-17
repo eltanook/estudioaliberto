@@ -94,9 +94,10 @@ export function AboutSection({ showTitle = true, bgGrey = false }: AboutSectionP
           <div className="lg:col-span-5 relative min-h-[500px] group overflow-hidden">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/working-project-da8oMZd85qcC2v735baIouzYzdt68W.jpg"
-              alt="Equipo profesional trabajando"
+              alt="Abogado y cliente analizando documentación legal detallada en oficina"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Hover Overlay with Social Links */}
             <div className="absolute inset-0 bg-[#0a1628]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
