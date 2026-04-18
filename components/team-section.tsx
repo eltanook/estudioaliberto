@@ -112,33 +112,27 @@ export function TeamSection({ showTitle = true }: TeamSectionProps) {
         >
           {/* Text Content (6 cols) */}
           <div className="lg:col-span-6 space-y-8">
-            <h3 className="font-serif text-3xl md:text-4xl text-foreground">Solidez Jurídica con un Enfoque Humano</h3>
+            <h3 className="font-serif text-3xl md:text-4xl text-foreground">Nuestro compromiso</h3>
+            <p className="text-xl text-[#722f37] font-medium leading-relaxed">
+              Nos enfocamos en brindar un servicio cercano, transparente y eficaz, buscando siempre la mejor solución para cada cliente.
+            </p>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
               <p>
-                El Dr. Martin Aliberto fundó este estudio con la convicción de que la abogacía debe ser transparente, ágil y, sobre todo, empática. Con más de 15 años de trayectoria, ha liderado con éxito cientos de casos de amparos de salud, garantizando que el acceso a la medicina prepaga y obras sociales sea una realidad tangible para sus clientes.
+                Soy abogado egresado de la Facultad de Derecho de la Universidad de Buenos Aires (UBA), con especialización en derecho civil y de familia. Durante cinco años (2017–2022) me desempeñé como auxiliar docente en la materia “Práctica Profesional”, lo que me permitió fortalecer mi formación y desarrollar una mirada práctica del ejercicio profesional.
               </p>
               <p>
-                Su compromiso es total: desde la primera consulta hasta la resolución final, usted contará con el respaldo de un profesional que entiende la urgencia y complejidad de su situación legal.
+                Me especializo en sucesiones, divorcios, contratos y amparos de salud, trabajando con compromiso y cercanía para que cada persona entienda su situación y pueda tomar decisiones con tranquilidad.
+              </p>
+              <p>
+                Continúo capacitándome de manera constante, con el objetivo de mantenerme actualizado y brindar un asesoramiento jurídico sólido, preciso y acorde a las necesidades actuales de cada cliente.
+              </p>
+              <p>
+                En ESTUDIO JURIDICO ALIBERTO acompaño a mis clientes en momentos clave, brindando asesoramiento legal claro, ágil y enfocado en resultados concretos. Mi prioridad es ofrecer soluciones rápidas y efectivas, con un trato personalizado y una comunicación directa en cada etapa del proceso.
+              </p>
+              <p>
+                Si necesitás resolver un tema legal, podés contactarme y recibir asesoramiento a medida desde el primer momento.
               </p>
             </div>
-            <ul className="grid sm:grid-cols-2 gap-4">
-              <li className="flex items-center gap-3 text-foreground font-medium">
-                <span className="w-2 h-2 bg-[#722f37]" />
-                Director y Fundador
-              </li>
-              <li className="flex items-center gap-3 text-foreground font-medium">
-                <span className="w-2 h-2 bg-[#722f37]" />
-                Abogado (UBA)
-              </li>
-              <li className="flex items-center gap-3 text-foreground font-medium">
-                <span className="w-2 h-2 bg-[#722f37]" />
-                Líder en Amparos de Salud
-              </li>
-              <li className="flex items-center gap-3 text-foreground font-medium">
-                <span className="w-2 h-2 bg-[#722f37]" />
-                Especialista Civil
-              </li>
-            </ul>
             <div className="pt-4">
               <a 
                 href="/contacto"

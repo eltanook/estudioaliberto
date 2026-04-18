@@ -8,48 +8,52 @@ const serviceDetails = [
     id: "amparos",
     title: "Amparos de Salud",
     icon: ShieldCheck,
-    description: "Nuestra especialidad principal. Brindamos una respuesta legal inmediata ante el incumplimiento de Obras Sociales y Prepagas.",
+    description: "Es una acción judicial rápida que permite garantizar el acceso a tratamientos, medicamentos o prestaciones médicas cuando estos son negados o demorados por obras sociales, prepagas o el sistema de salud en general, sea público o privado.\n\nEste tipo de proceso busca proteger derechos fundamentales, como el derecho a la vida y a la salud, obteniendo en muchos casos respuestas urgentes por parte de la Justicia.\n\nIntervenimos en casos de:",
     details: [
-      "Cobertura total de medicación y tratamientos oncológicos o crónicos.",
-      "Asistencia en discapacidad (Ley 24.901) y acompañamiento terapéutico.",
-      "Reclamos por prótesis, cirugías y fertilización asistida.",
-      "Medidas cautelares para asegurar la atención mientras dura el proceso."
+      "Negativa de cobertura de tratamientos o cirugías",
+      "Falta de entrega de medicamentos",
+      "Prestaciones en discapacidad",
+      "Cobertura o reintegros por internación geriátrica",
+      "Solicitudes de tratamientos de alto costo",
+      "Incumplimientos de obras sociales y prepagas en general"
     ]
   },
   {
     id: "sucesiones",
-    title: "Sucesiones y Herencias",
+    title: "Sucesiones",
     icon: Users,
-    description: "Tramitación ágil y profesional de sucesiones ab-intestato o testamentarias en CABA y Provincia de Buenos Aires.",
+    description: "La sucesión es el proceso legal mediante el cual se transmiten los bienes, derechos y obligaciones de una persona fallecida a sus herederos.\n\nNos encargamos de gestionar el trámite sucesorio de manera ágil y eficiente, ya sea que exista o no testamento, garantizando la correcta inscripción de los bienes y la seguridad jurídica para todas las partes involucradas.\n\nDentro del proceso realizamos:",
     details: [
-      "Inscripción de bienes inmuebles y muebles registrables.",
-      "Acuerdos particionarios entre herederos para una división equitativa.",
-      "Búsqueda de herederos y declaratoria de herederos.",
-      "Sucesiones urgentes y procesos abreviados."
+      "Inicio y tramitación de sucesiones",
+      "Declaratoria de herederos",
+      "Inscripción de bienes (inmuebles, automotores, etc.)",
+      "Asesoramiento durante todo el proceso"
     ]
   },
   {
     id: "divorcios",
-    title: "Divorcios y Familia",
+    title: "DIVORCIO",
     icon: Gavel,
-    description: "Asesoramiento integral en derecho de familia, priorizando la resolución de conflictos de forma armónica.",
+    description: "El divorcio permite disolver legalmente el vínculo matrimonial, ya sea de común acuerdo o a solicitud de una de las partes. Brindamos acompañamiento legal en todo el proceso, priorizando soluciones claras, rápidas y que resguarden los intereses personales y familiares.\n\nAsesoramos en:",
     details: [
-      "Divorcios exprés (unilaterales o de común acuerdo).",
-      "Convenios reguladores de alimentos, comunicación y cuidado personal.",
-      "Liquidación de la sociedad conyugal y compensación económica.",
-      "Atención personalizada con estricta confidencialidad."
+      "Divorcios EXPRESS de común acuerdo y unilaterales",
+      "División de bienes o convenio",
+      "Cuota alimentaria",
+      "Cuidado personal de hijos",
+      "Régimen de comunicación",
+      "Compensación económica\nentre otros rubros"
     ]
   },
   {
     id: "contratos",
-    title: "Contratos y Convenios",
+    title: "CONTRATOS",
     icon: FileText,
-    description: "Redacción y revisión de instrumentos legales para asegurar tus operaciones civiles y comerciales.",
+    description: "Los contratos son herramientas fundamentales para formalizar acuerdos y prevenir conflictos. Una correcta redacción es clave para proteger los intereses de las partes. Ofrecemos asesoramiento en la elaboración, revisión y negociación de contratos civiles y comerciales adaptados a cada necesidad particular.\n\nAlgunos ejemplos:",
     details: [
-      "Contratos de alquiler (vivienda y comercial) adaptados a la normativa vigente.",
-      "Convenios de honorarios y acuerdos de servicios.",
-      "Cartas documento, intimaciones y transacciones extrajudiciales.",
-      "Auditoría legal de documentos antes de la firma."
+      "contrato de alquiler",
+      "contrato de locación de servicios",
+      "compraventa de bienes",
+      "Redacción y revisión de contratos personalizados"
     ]
   }
 ]
@@ -100,7 +104,7 @@ function ServiceDetailItem({ service, Icon, isEven }: { service: typeof serviceD
           </div>
           <h3 className="font-serif text-xl md:text-3xl text-foreground">{service.title}</h3>
         </div>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+        <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
           {service.description}
         </p>
         <ul className="grid sm:grid-cols-2 gap-4 mt-6">
@@ -112,7 +116,7 @@ function ServiceDetailItem({ service, Icon, isEven }: { service: typeof serviceD
           ))}
         </ul>
       </div>
-      <div className="lg:w-1/2 w-full h-px lg:h-64 bg-gradient-to-r from-transparent via-[#722f37]/20 to-transparent flex items-center justify-center overflow-hidden">
+      <div className="lg:w-1/2 w-full h-px lg:h-[450px] bg-gradient-to-r from-transparent via-[#722f37]/20 to-transparent flex items-center justify-center overflow-hidden">
         <div className="hidden lg:block text-[#722f37]/5 font-serif text-[60px] xl:text-[100px] font-bold select-none whitespace-nowrap">
           {service.title.split(' ')[0]}
         </div>

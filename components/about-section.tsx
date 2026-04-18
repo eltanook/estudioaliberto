@@ -68,9 +68,7 @@ export function AboutSection({ showTitle = true, bgGrey = false }: AboutSectionP
 
             {/* Stats with Counter */}
             <div className="mt-10 flex items-center gap-8">
-              <CounterStat value={15} label="Años de Experiencia" suffix="+" />
-              <div className="w-px h-16 bg-border" />
-              <CounterStat value={1000} label="Casos Resueltos" suffix="+" />
+              <CounterStat value={8} label="Años de Experiencia" suffix="+" />
             </div>
 
             {/* CTAs */}
