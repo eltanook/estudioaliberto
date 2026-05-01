@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Dr. Martin Aliberto",
     role: "Director",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31214-lAp2en6h5QzT09jeAhbki26PJoR1b5.jpg",
+    image: "/WhatsApp Image 2026-04-30 at 16.19.57.jpeg",
   },
   {
     name: "Dra. Laura Gonzalez",
@@ -103,15 +103,22 @@ export function TeamSection({ showTitle = true }: TeamSectionProps) {
           </div>
         )}
 
-        {/* Aliberto Content: 6 columns text, 6 columns image */}
+        {/* Team Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+          {teamMembers.map((member, index) => (
+            <TeamCard key={index} member={member} index={index} />
+          ))}
+        </div>
+
+        {/* Aliberto Content: 7 columns text, 5 columns image */}
         <div 
           ref={contentRef}
           className={`grid lg:grid-cols-12 gap-12 items-center transition-all duration-1000 ${
             contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          {/* Text Content (6 cols) */}
-          <div className="lg:col-span-6 space-y-8">
+          {/* Text Content (7 cols) */}
+          <div className="lg:col-span-7 space-y-8">
             <h3 className="font-serif text-3xl md:text-4xl text-foreground">Nuestro compromiso</h3>
             <p className="text-xl text-[#722f37] font-medium leading-relaxed">
               Nos enfocamos en brindar un servicio cercano, transparente y eficaz, buscando siempre la mejor solución para cada cliente.
@@ -143,15 +150,15 @@ export function TeamSection({ showTitle = true }: TeamSectionProps) {
             </div>
           </div>
 
-          {/* Image Content (6 cols) */}
-          <div className="lg:col-span-6 relative group overflow-hidden">
-            <div className="relative aspect-[4/3] overflow-hidden border-2 border-border shadow-2xl">
+          {/* Image Content (5 cols) */}
+          <div className="lg:col-span-5 relative group overflow-hidden">
+            <div className="relative aspect-[3/4] overflow-hidden border-2 border-border shadow-2xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31214-lAp2en6h5QzT09jeAhbki26PJoR1b5.jpg"
+                src="/WhatsApp Image 2026-04-30 at 16.19.56.jpeg"
                 alt="Dr. Martin Aliberto - Director Fundador de Estudio Jurídico Aliberto"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
               {/* Overlay on Hover */}
               <div className="absolute inset-0 bg-[#0a1628]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-white">
